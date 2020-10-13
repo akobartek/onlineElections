@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/onlineElections/static/css/main.b0523fba.chunk.css",
-    "main.js": "/onlineElections/static/js/main.6312d154.chunk.js",
-    "main.js.map": "/onlineElections/static/js/main.6312d154.chunk.js.map",
+    "main.js": "/onlineElections/static/js/main.ae73d288.chunk.js",
+    "main.js.map": "/onlineElections/static/js/main.ae73d288.chunk.js.map",
     "runtime-main.js": "/onlineElections/static/js/runtime-main.e6f63865.js",
     "runtime-main.js.map": "/onlineElections/static/js/runtime-main.e6f63865.js.map",
-    "static/js/2.391ae7e2.chunk.js": "/onlineElections/static/js/2.391ae7e2.chunk.js",
-    "static/js/2.391ae7e2.chunk.js.map": "/onlineElections/static/js/2.391ae7e2.chunk.js.map",
+    "static/js/2.1382b6cf.chunk.js": "/onlineElections/static/js/2.1382b6cf.chunk.js",
+    "static/js/2.1382b6cf.chunk.js.map": "/onlineElections/static/js/2.1382b6cf.chunk.js.map",
     "index.html": "/onlineElections/index.html",
-    "precache-manifest.94757e7b0580f8d09390cf32f91d94c7.js": "/onlineElections/precache-manifest.94757e7b0580f8d09390cf32f91d94c7.js",
+    "precache-manifest.aa2a93a782b7b52e948be75926ece3f5.js": "/onlineElections/precache-manifest.aa2a93a782b7b52e948be75926ece3f5.js",
     "service-worker.js": "/onlineElections/service-worker.js",
     "static/css/main.b0523fba.chunk.css.map": "/onlineElections/static/css/main.b0523fba.chunk.css.map",
-    "static/js/2.391ae7e2.chunk.js.LICENSE.txt": "/onlineElections/static/js/2.391ae7e2.chunk.js.LICENSE.txt"
+    "static/js/2.1382b6cf.chunk.js.LICENSE.txt": "/onlineElections/static/js/2.1382b6cf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e6f63865.js",
-    "static/js/2.391ae7e2.chunk.js",
+    "static/js/2.1382b6cf.chunk.js",
     "static/css/main.b0523fba.chunk.css",
-    "static/js/main.6312d154.chunk.js"
+    "static/js/main.ae73d288.chunk.js"
   ]
 }
