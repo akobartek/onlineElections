@@ -16,6 +16,7 @@ export default class Results extends Component {
       dbData: null,
       currentRound: null,
     };
+    this.fetchDataFromFirestore = this.fetchDataFromFirestore.bind(this);
   }
 
   fetchDataFromFirestore() {
