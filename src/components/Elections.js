@@ -82,7 +82,7 @@ export default class Elections extends Component {
       const roundRef = docRef.collection("rounds").doc(data.activeRound);
       roundRef.get().then((roundDoc) => {
         const roundData = roundDoc.data();
-        if (roundData.votes.includes(userCode)) {
+        if (roundData.voters.includes(userCode)) {
           alert("Oddano już głos używając podanego kodu!");
           return;
         }
