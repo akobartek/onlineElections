@@ -1,0 +1,14 @@
+{
+  "homepage": "https://akobartek.github.io/onlineElections/",
+  "short_name": "Online Elections",
+  "name": "Online MF Tau Elections",
+  "icons": [{
+    "src": "mftau.png",
+    "type": "image/png",
+    "sizes": "64x64"
+  }],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
