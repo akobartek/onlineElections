@@ -88,9 +88,11 @@ export default class Elections extends Component {
         }
         roundRef.update({
           voters: firebase.firestore.FieldValue.arrayUnion(userCode),
-          votes: firebase.firestore.FieldValue.arrayUnion(
-            this.state.currentRound.candidates[this.state.selectedCandidate]
-          ),
+        });
+        roundRef.collection("votes").add({
+          vote: this.state.currentRound.candidates[
+            this.state.selectedCandidate
+          ],
         });
         alert("Głos pomyślnie zapisany!");
         this.linkElement.current.click();

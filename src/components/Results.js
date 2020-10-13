@@ -15,6 +15,7 @@ export default class Results extends Component {
     this.state = {
       dbData: null,
       currentRound: null,
+      votes: null,
     };
     this.fetchDataFromFirestore = this.fetchDataFromFirestore.bind(this);
   }
@@ -25,16 +26,23 @@ export default class Results extends Component {
       .doc(this.props.match.params.code);
     docRef.get().then((doc) => {
       const data = doc.data();
-      docRef
-        .collection("rounds")
-        .doc(data.activeRound)
-        .get()
-        .then((roundDoc) => {
-          this.setState({
-            dbData: data,
-            currentRound: roundDoc.data(),
+      const roundRef = docRef.collection("rounds").doc(data.activeRound);
+      roundRef.get().then((roundDoc) => {
+        roundRef
+          .collection("votes")
+          .get()
+          .then((snapshot) => {
+            const votesList = [];
+            snapshot.forEach((voteDoc) => {
+              votesList.push(voteDoc.data().vote);
+            });
+            this.setState({
+              dbData: data,
+              currentRound: roundDoc.data(),
+              votes: votesList,
+            });
           });
-        });
+      });
     });
   }
 
@@ -55,10 +63,10 @@ export default class Results extends Component {
     if (this.state.currentRound != null) {
       roundName = this.state.currentRound.name;
 
-      const numberOfVotes = this.state.currentRound.votes.length;
+      const numberOfVotes = this.state.votes.length;
       for (let i = 0; i < this.state.currentRound.candidates.length; i++) {
         const candidate = this.state.currentRound.candidates[i];
-        const numberOfCandidateVotes = this.state.currentRound.votes.filter(
+        const numberOfCandidateVotes = this.state.votes.filter(
           (vote) => vote === candidate
         ).length;
         let percentage = (numberOfCandidateVotes / numberOfVotes) * 100;
