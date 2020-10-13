@@ -39,9 +39,9 @@ export default class Elections extends Component {
         .doc(data.activeRound)
         .get()
         .then((roundDoc) => {
-          for (let i = 0; i < 9; i++) {
-            docRef.collection("rounds").add(roundDoc.data());
-          }
+          // for (let i = 0; i < 9; i++) {
+          //   docRef.collection("rounds").add(roundDoc.data());
+          // }
           this.setState({
             dbData: data,
             currentRound: roundDoc.data(),
